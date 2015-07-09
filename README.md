@@ -3,7 +3,7 @@ Manipulate bash/zsh prompts in your shell scripts!
 
 ### Installation
 ```bash
-wget TODO
+wget https://raw.githubusercontent.com/siddharthist/prompt-manipulation/master/prompt-manipulation.sh
 ```
 
 ### Usage
@@ -52,20 +52,35 @@ function reset_prompt() {
 
 ### Examples
 
+#### `prefix_prompt`
 Prompt: `$ `
-Code: `prompt_prefix "prompt"`
+
+Code: `prefix_prompt "prompt"`
+
 Prompt: `prompt$ `
+
 Code: `reset_prompt`
+
 Prompt: `$ `
 
-Prompt: `user@hostname `
-Code: `prompt_suffix "DB>"`
-Prompt: `user@hostname DB>`
-Code: `reset_prompt`
+#### `suffix_prompt`
 Prompt: `user@hostname `
 
-Prompt: `user [11:09:56]>`
-Code: `prompt_replace ">>>"`
-Prompt: `>>>`
+Code: `suffix_prompt "DB>"`
+
+Prompt: `user@hostname DB>`
+
 Code: `reset_prompt`
+
+Prompt: `user@hostname `
+
+#### `replace_prompt`
+Prompt: `user [11:09:56]>`
+
+Code: `replace_prompt ">>>"`
+
+Prompt: `>>>`
+
+Code: `reset_prompt`
+
 Prompt: `user [11:09:56]>`
