@@ -3,7 +3,7 @@
 # store in the environment, in case this script is quit without resetting
 export PROMPT_MANIPULATION_OLD=$PS1
 # store locally in case environment is manipulated during run
-old=$PS1
+propmt_manipulation_old=$PS1
 
 # Description: Echos the prompt prefix as a string
 # Arguments: none
@@ -37,13 +37,13 @@ function reset_prompt() {
     # -n tests if this variable is not zero length (i.e. set)
     if [ -z "$PROMPT_MANIPULATION_OLD" ] && [ -z "$old" ]; then
         echo "[ERROR] There was no old prompt to reset to!"
-    elif [ -n "$old" ]; then
-        PS1=$old
+    elif [ -n "$propmt_manipulation_old" ]; then
+        PS1=$propmt_manipulation_old
         export PS1
     elif [ -n "$PROMPT_MANIPULATION_OLD" ]; then
         PS1=$PROMPT_MANIPULATION_OLD
         export PS1
     fi
     unset PROMPT_MANIPULATION_OLD
-    unset old
+    unset propmt_manipulation_old
 }

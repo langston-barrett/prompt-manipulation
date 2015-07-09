@@ -57,8 +57,6 @@ shell/prompt-manipulation% source prompt_manipulation.sh
 shell/prompt-manipulation% current_prompt
 %{%}%2~% %# %{%}
 shell/prompt-manipulation% prefix_prompt "~~~PREFIX~~~"
-~~~PREFIX~~~shell/prompt-manipulation% echo $old
-%{%}%2~% %# %{%}
 ~~~PREFIX~~~shell/prompt-manipulation% suffix_prompt "~~~SUFFIX~~~ "
 ~~~PREFIX~~~shell/prompt-manipulation% ~~~SUFFIX~~~ replace_prompt "~~~"
 ~~~reset_prompt
