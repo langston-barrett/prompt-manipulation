@@ -52,35 +52,14 @@ function reset_prompt() {
 
 ### Examples
 
-#### `prefix_prompt`
-Prompt: `$ `
-
-Code: `prefix_prompt "prompt"`
-
-Prompt: `prompt$ `
-
-Code: `reset_prompt`
-
-Prompt: `$ `
-
-#### `suffix_prompt`
-Prompt: `user@hostname `
-
-Code: `suffix_prompt "DB>"`
-
-Prompt: `user@hostname DB>`
-
-Code: `reset_prompt`
-
-Prompt: `user@hostname `
-
-#### `replace_prompt`
-Prompt: `user [11:09:56]>`
-
-Code: `replace_prompt ">>>"`
-
-Prompt: `>>>`
-
-Code: `reset_prompt`
-
-Prompt: `user [11:09:56]>`
+```bash
+shell/prompt-manipulation% source prompt_manipulation.sh
+shell/prompt-manipulation% current_prompt
+%{%}%2~% %# %{%}
+shell/prompt-manipulation% prefix_prompt "~~~PREFIX~~~"
+~~~PREFIX~~~shell/prompt-manipulation% echo $old
+%{%}%2~% %# %{%}
+~~~PREFIX~~~shell/prompt-manipulation% suffix_prompt "~~~SUFFIX~~~ "
+~~~PREFIX~~~shell/prompt-manipulation% ~~~SUFFIX~~~ replace_prompt "~~~"
+~~~reset_prompt
+```
