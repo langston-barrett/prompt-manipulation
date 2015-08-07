@@ -23,8 +23,8 @@ function store_prompt() {
 # Arguments: none
 # Returns (echoes): none
 function unstore_prompt() {
-    unset "$prompt_manipulation_old"
-    unset "$PROMPT_MANIPULATION_OLD"
+    unset prompt_manipulation_old
+    unset PROMPT_MANIPULATION_OLD
 }
 
 # Description: store the current prompt as a backup in as many places as we can!
